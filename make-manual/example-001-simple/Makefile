@@ -1,3 +1,6 @@
+# declare clean targe is phony target
+.PHONY clean
+
 edit : main.o carg_parser.o main_loop.o global.o signal.o regex.o buffer.o io.o
 	cc -o edit main.o carg_parser.o main_loop.o global.o signal.o regex.o buffer.o io.o
 
