@@ -1,8 +1,10 @@
-# declare clean targe is phony target
-.PHONY clean
+objects = main.o carg_parser.o main_loop.o global.o signal.o regex.o buffer.o io.o
 
-edit : main.o carg_parser.o main_loop.o global.o signal.o regex.o buffer.o io.o
-	cc -o edit main.o carg_parser.o main_loop.o global.o signal.o regex.o buffer.o io.o
+# declare clean targe is phony target
+.PHONY: clean
+
+edit : $(objects)
+	cc -o edit $(objects)
 
 main.o : main.c carg_parser.h ed.h
 	cc -c main.c
