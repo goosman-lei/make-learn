@@ -16,7 +16,7 @@
 
 * create "Makefile.am"
 
-* run "automaek"
+* run "automake"
 
 * Fix errors and run "automake" again
 
